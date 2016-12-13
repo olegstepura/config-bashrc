@@ -12,5 +12,5 @@ Cat was inserted to print result so that you can make sure everything is ok.
 
 If you have to type command above, use this:
 ```bash
-bash <(curl -s https://goo.gl/sqo51K)
+bash <(curl -Ls https://goo.gl/sqo51K)
 ```

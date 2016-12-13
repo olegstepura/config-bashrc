@@ -3,11 +3,16 @@ My personal system-level bashrc config. Used on ArchLinux primarily, but is easy
 
 To install this I do::
 ```bash
-cd /etc
-wget https://github.com/olegstepura/config-bashrc/blob/master/bash.bashrc.local.sh
-vim bash.bashrc
+curl https://raw.githubusercontent.com/olegstepura/config-bashrc/master/bash.bashrc.local.sh -o /etc/bash.bashrc.local.sh
+sed -i -e '4i. /etc/bash.bashrc.local.sh && return\' /etc/bash.bashrc
+cat /etc/bash.bashrc
 ```
-And add this to the very beginning of the file (actually after first comments in a file to allow syntax discovery by vim):
-```
-. /etc/bash.bashrc.local.sh && return
+Second command adds usage of the separate bashrc script in the main system bashrc (to the very beginning of the file, though after first comments in a file to allow syntax discovery by vim).
+Cat was inserted to print result so that you can make sure everything is ok.
+
+If you have to type command above, use this:
+```bash
+curl https://goo.gl/x1PFv2 -o /etc/bash.bashrc.local.sh
+sed -i -e '4i. /etc/bash.bashrc.local.sh && return\' /etc/bash.bashrc
+cat /etc/bash.bashrc
 ```

@@ -1,3 +1,4 @@
+#/bin/bash
 curl https://raw.githubusercontent.com/olegstepura/config-bashrc/master/bash.bashrc.local.sh -o /etc/bash.bashrc.local.sh
 sed -i -e '4i. /etc/bash.bashrc.local.sh && return\' /etc/bash.bashrc
 cat /etc/bash.bashrc

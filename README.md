@@ -12,7 +12,5 @@ Cat was inserted to print result so that you can make sure everything is ok.
 
 If you have to type command above, use this:
 ```bash
-curl https://goo.gl/x1PFv2 -o /etc/bash.bashrc.local.sh
-sed -i -e '4i. /etc/bash.bashrc.local.sh && return\' /etc/bash.bashrc
-cat /etc/bash.bashrc
+bash <(curl -s https://goo.gl/sqo51K)
 ```

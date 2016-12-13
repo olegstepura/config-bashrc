@@ -115,7 +115,6 @@ alias grep="grep --colour=auto"
 # See also: https://wiki.archlinux.org/index.php/Bash#The_.22command_not_found.22_hook
 [ -r /usr/share/doc/pkgfile/command-not-found.bash ] && . /usr/share/doc/pkgfile/command-not-found.bash
 
-alias vless=/usr/share/vim/vim73/macros/less.sh
 alias lsh="ls -lah"
 
 export EDITOR="vim"

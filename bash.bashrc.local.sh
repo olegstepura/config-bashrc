@@ -44,7 +44,7 @@ function __prompt_command_generator() {
 
         #mark root as red
         PS1+='[[ $UID -eq 0 ]] && echo -n "'$BLDRED'" || echo -n "'$TXTGRN'";'
-        PS1+='echo -n "\u@\H";'
+        PS1+='echo -n "\u@'$BLDCYN'\H";'
 
         #append current path
         PS1+='echo -n " '$BLDBLU'\w";'

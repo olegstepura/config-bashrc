@@ -52,8 +52,12 @@ function __prompt_command_generator() {
         #append git branch
         if type -p git>/dev/null; then
                 PS1+='__GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2> /dev/null);'
-                PS1+='[[ -n "$__GIT_BRANCH" ]] && echo -n " '$TXTYLW'(${__GIT_BRANCH})";'
+                PS1+='__GIT_CHANGES=$(git status  --untracked-files=all --porcelain 2> /dev/null | wc -l);'
+                PS1+='__GIT_CHANGES=${__GIT_CHANGES//[[:blank:]]/};'
+                PS1+='__GIT_CHANGES=$([[ $__GIT_CHANGES -eq 0 ]] && echo -n "" ||  echo -n " +${__GIT_CHANGES}");'
+                PS1+='[[ -n "$__GIT_BRANCH" ]] && echo -n " '$TXTYLW'(${__GIT_BRANCH}${__GIT_CHANGES})";'
                 PS1+='unset __GIT_BRANCH;'
+                PS1+='unset __GIT_CHANGES;'
         fi
 
         #show exit code

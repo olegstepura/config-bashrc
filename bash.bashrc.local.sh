@@ -104,10 +104,8 @@ alias grep="grep --colour=auto"
 
 # Try to enable the auto-completion (type: "pacman -S bash-completion" to install it).
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/share/bash-completion/completions/fzf ] && . /usr/share/bash-completion/completions/fzf
 
-# Try to enable the "Command not found" hook ("pacman -S pkgfile" to install it).
-# See also: https://wiki.archlinux.org/index.php/Bash#The_.22command_not_found.22_hook
-[ -r /usr/share/doc/pkgfile/command-not-found.bash ] && . /usr/share/doc/pkgfile/command-not-found.bash
 
 alias lsh="ls -lah"
 
